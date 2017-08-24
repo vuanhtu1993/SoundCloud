@@ -13,7 +13,7 @@
                         <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="name" name="name"
-                                   placeholder="Type name of song" />
+                                   placeholder="Type name of song" ng-model="song.name" ng-required="true"/>
                             <span id="helpBlock2" class="help-block">Type name of song</span>
                         </div>
                     </div>

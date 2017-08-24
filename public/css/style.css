@@ -1,0 +1,72 @@
+.navbar {
+  margin-bottom: 0;
+  border: none; }
+
+img.image-brand {
+  width: 50px; }
+
+a.navbar-brand {
+  padding-top: 0;
+  padding-left: 6em; }
+
+.form-group {
+  margin-left: 4em; }
+  .form-group .search-bar {
+    width: 40em; }
+
+.cover {
+  width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.background {
+  background-color: white;
+  margin-top: 1px; }
+
+.results-search {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  padding-top: 30px;
+  font-size: 24px;
+  width: 100%;
+  padding-left: 18px; }
+
+.row.contain {
+  margin-top: 20px; }
+  .row.contain .user-name {
+    font-size: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: black;
+    margin-left: 10px;
+    width: 100%; }
+
+.glyphicon {
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 18px; }
+
+.user-list {
+  list-style: none;
+  font-size: 16px;
+  display: none; }
+  .user-list li {
+    padding-top: 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.content {
+  position: relative; }
+  .content .modal {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    border: 1px solid red;
+    top: 10px; }
+
+.row.play-music {
+  margin-top: 10px; }
+  .row.play-music .music-img img {
+    width: 200px;
+    height: auto; }
+
+/*# sourceMappingURL=style.css.map */

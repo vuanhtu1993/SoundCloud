@@ -9,6 +9,6 @@ myApp.controller('SoundCloudController',function ($http) {
             soundcloud.data_music = response.data;
         });
     soundcloud.modal=function () {
-        $('#myModal').modal('show',100);
+        $('#myModal').modal('show');
     }
 });

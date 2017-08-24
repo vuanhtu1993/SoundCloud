@@ -29,7 +29,7 @@
             <ul class="nav navbar-nav">
                 <li><a class="sign-in" href="#">Sign in</a></li>
                 <li><a href="#">Create account</a></li>
-                <li><a href="" >Upload +</a></li>
+                <li><a href="" ng-click="soundcloud.modal()" >Upload +</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Dropdown <span class="caret"></span></a>

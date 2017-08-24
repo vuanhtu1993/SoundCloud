@@ -13,24 +13,24 @@
                         <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="name" name="name"
-                                   placeholder="Type name of song" ng-model="song.name" ng-required="true"/>
+                                   placeholder="Type name of song" ng-model="songs.name" ng-required="true"/>
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.name.$error.required">Type name of song</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Link song</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="age" name="age"
-                                   placeholder="http://"  ng-model="song.link" ng-required="true">
-                            <span id="helpBlock2" class="help-block" ng-show="formAddsong.link.$error.required">Link of song</span>
+                            <input type="text" class="form-control" id="age" name="song"
+                                   placeholder="http://"  ng-model="songs.song" ng-required="true">
+                            <span id="helpBlock2" class="help-block" ng-show="formAddsong.song.$error.required">Link of song</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Image</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="email" name="email"
-                                   placeholder="http://"  ng-model="song.link" ng-required="true"/>
-                            <span id="helpBlock2" class="help-block" ng-show="formAddsong.link.$error.required">Link image of song</span>
+                            <input type="email" class="form-control" id="email" name="image"
+                                   placeholder="http://"  ng-model="songs.image" ng-required="true"/>
+                            <span id="helpBlock2" class="help-block" ng-show="formAddsong.image.$error.required">Link image of song</span>
                         </div>
                     </div>
                     <label for="inputEmail3" class="col-sm-3 control-label">Type</label>

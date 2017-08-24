@@ -12,6 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('music.index');
+    return view('layout.index');
 });
 Route::resource('musics','MusicController');

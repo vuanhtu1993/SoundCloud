@@ -14,8 +14,17 @@ class MusicController extends Controller
      */
     public function index()
     {
-        $musics = Music::all();
-        return view('music.index',compact('musics'));
+        $q = \request('q');
+        if ($q) {
+            $musics = \DB::table('musics')
+                ->select(\DB::raw("*"))
+                ->where('name', 'like','%'.$q.'%')
+                ->get();
+        }
+        else {
+            $musics = Music::all();
+        }
+        return view('music.index', compact('musics'));
     }
 
     /**
@@ -31,7 +40,7 @@ class MusicController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -42,7 +51,7 @@ class MusicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Music  $music
+     * @param  \App\Music $music
      * @return \Illuminate\Http\Response
      */
     public function show(Music $music)
@@ -53,7 +62,7 @@ class MusicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Music  $music
+     * @param  \App\Music $music
      * @return \Illuminate\Http\Response
      */
     public function edit(Music $music)
@@ -64,8 +73,8 @@ class MusicController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Music  $music
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Music $music
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Music $music)
@@ -76,7 +85,7 @@ class MusicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Music  $music
+     * @param  \App\Music $music
      * @return \Illuminate\Http\Response
      */
     public function destroy(Music $music)

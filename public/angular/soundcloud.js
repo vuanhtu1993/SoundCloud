@@ -29,6 +29,8 @@ myApp.controller('SoundCloudController',function ($http) {
     // hàm RegExp
     soundcloud.myTransfer = function (music) {
         var part1 = /\/[A-Z0-9]*\./g;
-        return music.link_music.match(part1);
+        results = music.link_music.match(part1);
+        results[0].replace('.',''); //chuyển array thành string, lấy string 0
+        return results;
     }
 });

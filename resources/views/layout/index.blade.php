@@ -26,15 +26,15 @@
             @include('layout.menu_right')
             {{-- end menu right--}}
             <div class="col-sm-10 col-md-10 content">
-                <div class="row play-music" ng-repeat="data in soundcloud.data_music">
+                <div class="row play-music" ng-repeat="music in soundcloud.musics">
                     <div class="col-sm-3">
-                        <div class="music-img"><img src="<% data.link_img %>" alt=""></div>
+                        <div class="music-img"><img src="<% music.link_img %>" alt=""></div>
                     </div>
                     <div class="col-sm-8">
-                        <div class="article"><% data.name %></div>
-                        <div class="article"><% data.link_music %></div>
-                        <div class="article"><% soundcloud.myTransfer(data) %></div>
-                        <div class="article"><iframe scrolling="no" width="600" height="50" ng-src="" frameborder="0" allowfullscreen="false"></iframe></div>
+                        <div class="article"><% music.name %></div>
+                        <div class="article"><% music.link_music %></div>
+                        <% soundcloud.myTransfer(music) %>
+                        <div class="article"><iframe scrolling="no" width="600" height="50" ng-src="<% soundcloud.myTransfer(music) %>" frameborder="0" allowfullscreen="false"></iframe></div>
                     </div>
                 </div>
             </div>

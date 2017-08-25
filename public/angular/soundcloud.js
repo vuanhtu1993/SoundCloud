@@ -2,14 +2,14 @@ var myApp =angular.module('myApp',[],function ($interpolateProvider) {
     $interpolateProvider.startSymbol('<%');
     $interpolateProvider.endSymbol('%>')
 });
-myApp.controller('SoundCloudController',function ($http) {
+myApp.controller('SoundCloudController',function ($http,$sce) {
     var soundcloud = this;
 
     soundcloud.reload = function () {
         $http
             .get("http://localhost/SoundCloud/public/musics")
             .then(function (response) {
-                soundcloud.data_music = response.data;
+                soundcloud.musics = response.data;
             })
     };
     soundcloud.reload();
@@ -30,7 +30,8 @@ myApp.controller('SoundCloudController',function ($http) {
     soundcloud.myTransfer = function (music) {
         var part1 = /\/[A-Z0-9]*\./g;
         results = music.link_music.match(part1);
-        results[0].replace('.',''); //chuyển array thành string, lấy string 0
-        return results;
+        results[0] = results[0].replace('.',''); //chuyển array thành string, lấy string 0
+        var embed_song_url = 'http://mp3.zing.vn/embed/song' + results[0];
+        return $sce.trustAsResourceUrl(embed_song_url);
     }
 });

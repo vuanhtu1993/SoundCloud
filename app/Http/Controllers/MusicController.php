@@ -45,7 +45,13 @@ class MusicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $music = new Music();
+        $music->name = $request->name;
+        $music->link_music = $request->song;
+        $music->link_img = $request->image;
+        $music->type = $request->type;
+        $music->alias = str_slug($request->name);
+        $music->save();
     }
 
     /**

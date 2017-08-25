@@ -13,7 +13,7 @@
                         <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="name" name="name"
-                                   placeholder="Type name of song" ng-model="songs.name" ng-required="true"/>
+                                   placeholder="Type name of song" ng-model="soundcloud.song.name" ng-required="true"/>
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.name.$error.required">Type name of song</span>
                         </div>
                     </div>
@@ -21,31 +21,33 @@
                         <label for="inputEmail3" class="col-sm-3 control-label">Link song</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="age" name="song"
-                                   placeholder="http://"  ng-model="songs.song" ng-required="true">
+                                   placeholder="http://" ng-model="soundcloud.song.song" ng-required="true">
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.song.$error.required">Link of song</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Image</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="email" name="image"
-                                   placeholder="http://"  ng-model="songs.image" ng-required="true"/>
+                            <input type="text" class="form-control" id="email" name="image"
+                                   placeholder="http://" ng-model="soundcloud.song.image" ng-required="true"/>
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.image.$error.required">Link image of song</span>
                         </div>
                     </div>
-                    <label for="inputEmail3" class="col-sm-3 control-label">Type</label>
-                    <select name="" id="">
-                        <option>Pop</option>
-                        <option>Rap</option>
-                        <option>RnB</option>
-                        <option>Balad</option>
-                        <option>Country</option>
-                    </select>
-
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Type</label>
+                        <select name="" id="" ng-model="soundcloud.song.type">
+                            <option value="Pop">Pop</option>
+                            <option value="Rap">Rap</option>
+                            <option value="RnB">RnB</option>
+                            <option value="Balad">Balad</option>
+                            <option value="Country">Country</option>
+                        </select>
+                    </div>
                 </form>
+                <% soundcloud.song %>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Lưu</button>
+                <button type="button" class="btn btn-primary" ng-click="soundcloud.save()">Lưu</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

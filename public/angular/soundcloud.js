@@ -36,5 +36,9 @@ myApp.controller('SoundCloudController',function ($http,$sce) {
         results[0] = results[0].replace('.',''); //chuyển array thành string, lấy string 0
         var embed_song_url = 'http://mp3.zing.vn/embed/song' + results[0];
         return $sce.trustAsResourceUrl(embed_song_url);
+    };
+    //get link of selected song user ng-click
+    soundcloud.linkURL = function (music) {
+        soundcloud.embed_link = music;
     }
 });

@@ -47,8 +47,8 @@ class MusicController extends Controller
     {
         $music = new Music();
         $music->name = $request->name;
-        $music->link_music = $request->song;
-        $music->link_img = $request->image;
+        $music->link_music = $request->link_music;
+        $music->link_img = $request->link_img;
         $music->type = $request->type;
         $music->alias = str_slug($request->name);
         $music->save();

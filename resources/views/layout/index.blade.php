@@ -33,6 +33,7 @@
                     <div class="col-sm-8">
                         <div class="article"><% music.name %></div>
                         <div class="article"><% music.link_music %></div>
+                        {{--lợi dụng --}}
                         <% soundcloud.myTransfer(music) %>
                         <div class="article"><iframe scrolling="no" width="800" height="50" ng-src="<% soundcloud.myTransfer(music) %>" frameborder="0" allowfullscreen="false"></iframe></div>
                     </div>

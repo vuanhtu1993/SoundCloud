@@ -22,8 +22,8 @@
                         <label for="inputEmail3" class="col-sm-3 control-label">Link song</label>
                         <div class="col-sm-9">
                             {{--input name="song" ng-model="soundcloud.song.song" --}}
-                            <input type="text" class="form-control" id="age" name="song"
-                                   placeholder="http://" ng-model="soundcloud.song.song" ng-required="true">
+                            <input type="text" class="form-control" id="age" name="link_music"
+                                   placeholder="http://" ng-model="soundcloud.song.link_music" ng-required="true">
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.song.$error.required">Link of song</span>
                         </div>
                     </div>
@@ -31,8 +31,8 @@
                         <label for="inputEmail3" class="col-sm-3 control-label">Image</label>
                         <div class="col-sm-9">
                             {{--input name="image" ng-model="soundcloud.song.image" --}}
-                            <input type="text" class="form-control" id="email" name="image"
-                                   placeholder="http://" ng-model="soundcloud.song.image" ng-required="true"/>
+                            <input type="text" class="form-control" id="email" name="link_img"
+                                   placeholder="http://" ng-model="soundcloud.song.link_img" ng-required="true"/>
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.image.$error.required">Link image of song</span>
                         </div>
                     </div>

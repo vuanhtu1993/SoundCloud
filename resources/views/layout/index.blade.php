@@ -28,21 +28,37 @@
             <div class="col-sm-10 col-md-10 content">
                 <div class="row play-music" ng-repeat="music in soundcloud.musics">
                     <div class="col-sm-3">
-                        <div class="music-img"><img src="<% music.link_img %>" alt=""></div>
+                        <div class="music-img" ng-click="soundcloud.linkURL(music)">
+                            <img src="<% music.link_img %>"  alt="">
+                            <div class="cover-img"></div>
+                        </div>
                     </div>
+                    {{--have to refactor variable like table at laravel--}}
                     <div class="col-sm-8">
                         <div class="article"><% music.name %></div>
+                        <div class="article"><% music.alias %></div>
                         <div class="article"><% music.link_music %></div>
+                        <div class="article"><% music.type %></div>
                         {{--lợi dụng --}}
                         <% soundcloud.myTransfer(music) %>
-                        <div class="article"><iframe scrolling="no" width="800" height="50" ng-src="<% soundcloud.myTransfer(music) %>" frameborder="0" allowfullscreen="false"></iframe></div>
+
                     </div>
                 </div>
             </div>
+            <% soundcloud.embed_link %>
         </div>
+
         {{--modal--}}
         @include('layout.modal')
         {{--end modal--}}
+    </div>
+    {{--pin media play music at bottom--}}
+    {{--play selected song--}}
+    <div class="media_play">
+        <div class="article ">
+            <iframe scrolling="no" width="1500" height="50" ng-src="<% soundcloud.myTransfer(soundcloud.embed_link) %>"
+                    frameborder="0" allowfullscreen="false" ></iframe>
+        </div>
     </div>
 </div>
 

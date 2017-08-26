@@ -29,6 +29,7 @@ myApp.controller('SoundCloudController',function ($http,$sce) {
     };
 
     // hàm RegExp
+    // học sau
     soundcloud.myTransfer = function (music) {
         var part1 = /\/[A-Z0-9]*\./g;
         results = music.link_music.match(part1);

@@ -12,10 +12,12 @@ myApp.controller('SoundCloudController',function ($http,$sce) {
                 soundcloud.musics = response.data;
             })
     };
-    soundcloud.reload(); //thực hiện lấy dữ liệu 
+    soundcloud.reload(); //thực hiện lấy dữ liệu
+    //show modal
     soundcloud.modal=function () {
         $('#myModal').modal('show');
     };
+    //hide modal
     soundcloud.close_modal=function () {
         $('#myModal').modal('hide');
     };

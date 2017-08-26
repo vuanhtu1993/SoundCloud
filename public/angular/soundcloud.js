@@ -4,7 +4,7 @@ var myApp =angular.module('myApp',[],function ($interpolateProvider) {
 });
 myApp.controller('SoundCloudController',function ($http,$sce) {
     var soundcloud = this;
-
+    //get dữ liệu từ view của laravel music\index
     soundcloud.reload = function () {
         $http
             .get("http://localhost/SoundCloud/public/musics")
@@ -12,7 +12,7 @@ myApp.controller('SoundCloudController',function ($http,$sce) {
                 soundcloud.musics = response.data;
             })
     };
-    soundcloud.reload();
+    soundcloud.reload(); //thực hiện lấy dữ liệu 
     soundcloud.modal=function () {
         $('#myModal').modal('show');
     };

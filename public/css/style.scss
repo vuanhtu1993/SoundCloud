@@ -1,32 +1,38 @@
 
-.navbar{
+.navbar {
   margin-bottom: 0;
   border: none;
 }
+
 img.image-brand {
   width: 50px;
 }
+
 a.navbar-brand {
   padding-top: 0;
   padding-left: 6em;
 }
+
 .form-group {
   margin-left: 4em;
-  .search-bar{
+  .search-bar {
     width: 40em;
   }
 }
-.cover{
+
+.cover {
   width: 1340px;
   margin-right: auto;
   margin-left: auto;
   background-color: white;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.background{
+
+.background {
   background-color: white;
   margin-top: 1px;
 }
+
 .results-search {
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
   padding-top: 30px;
@@ -34,33 +40,37 @@ a.navbar-brand {
   width: 100%;
   padding-left: 18px;
 }
+
 .row.contain {
   margin-top: 20px;
   .user-name {
     font-size: 18px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: black;
     margin-left: 10px;
     width: 100%;
   }
 }
-.glyphicon{
+
+.glyphicon {
   width: 100%;
   margin-top: 10px;
   padding-left: 18px;
 }
+
 .user-list {
   list-style: none;
   font-size: 16px;
   display: none;
-  li{
+  li {
     padding-top: 10px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
-.content{
+
+.content {
   position: relative;
-  .modal{
+  .modal {
     position: absolute;
     width: 400px;
     height: 600px;
@@ -68,10 +78,43 @@ a.navbar-brand {
     top: 10px;
   }
 }
-.row.play-music{
+
+.row.play-music {
   margin-top: 10px;
-  .music-img img{
-    width: 200px;
-    height: auto;
+  .music-img {
+    position: relative;
+    .cover-img{
+      background-color: white;
+      width: 200px;
+      height: 120px;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+    }
+    .cover-img:hover{
+      opacity: 0.8;
+      background: url("../images/play-btn-2.png") no-repeat top 40px right 80px;
+    }
+    img {
+      width: 200px;
+      height: 120px;
+    }
   }
 }
+
+.media_play {
+  position: fixed;
+  bottom: 0;
+
+}
+
+//modal
+select#style-select {
+  padding-top: 12px;
+  margin-top: 5px;
+  margin-left: 16px;
+  padding-right: 80px;
+  border: 1px solid rgba(128, 128, 128, 0.49);
+  border-radius: 4px;
+}
+//end modal

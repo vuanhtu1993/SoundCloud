@@ -21,7 +21,7 @@ myApp.controller('SoundCloudController',function ($http,$sce) {
     soundcloud.close_modal=function () {
         $('#myModal').modal('hide');
     };
-
+    //.then nghĩa là sau khi $http.post thành công thì mới then
     soundcloud.save = function () {
         $http.post('http://localhost/SoundCloud/public/musics', soundcloud.song)
             .then(soundcloud.close_modal)

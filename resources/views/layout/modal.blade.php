@@ -12,6 +12,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
                         <div class="col-sm-9">
+                            {{--input name="name" ng-model="soundcloud.song.name" --}}
                             <input type="text" class="form-control" id="name" name="name"
                                    placeholder="Type name of song" ng-model="soundcloud.song.name" ng-required="true"/>
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.name.$error.required">Type name of song</span>
@@ -20,6 +21,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Link song</label>
                         <div class="col-sm-9">
+                            {{--input name="song" ng-model="soundcloud.song.song" --}}
                             <input type="text" class="form-control" id="age" name="song"
                                    placeholder="http://" ng-model="soundcloud.song.song" ng-required="true">
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.song.$error.required">Link of song</span>
@@ -28,6 +30,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Image</label>
                         <div class="col-sm-9">
+                            {{--input name="image" ng-model="soundcloud.song.image" --}}
                             <input type="text" class="form-control" id="email" name="image"
                                    placeholder="http://" ng-model="soundcloud.song.image" ng-required="true"/>
                             <span id="helpBlock2" class="help-block" ng-show="formAddsong.image.$error.required">Link image of song</span>
@@ -35,7 +38,8 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Type</label>
-                        <select name="" id="" ng-model="soundcloud.song.type">
+                        {{--select name="name" ng-model="soundcloud.song.name" --}}
+                        <select name="type" id="" ng-model="soundcloud.song.type">
                             <option value="Pop">Pop</option>
                             <option value="Rap">Rap</option>
                             <option value="RnB">RnB</option>
